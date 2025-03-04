@@ -26,6 +26,10 @@ const userModel=mongoose.model("User", userSchema);
         
 const refreshTokens=[];
 
+app.get('/', (req,res)=>{
+    res.send(<>Welcome to backend</>)
+})
+
 app.post('/login-register', async(req,res)=>{
     try{
         const {email, password}= req.body;
